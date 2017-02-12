@@ -16,7 +16,7 @@ export class WeatherService {
     }
 
     return new Promise(resolve => {
-      this.http.get('assets/data/data.json')
+      this.http.get('/api/forecast/19.4587191,-99.178254')
         .map(res => res.json())
         .subscribe(data => {
           this.data = data;
